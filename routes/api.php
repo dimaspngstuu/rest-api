@@ -38,3 +38,4 @@ Route::delete('/animals',[AnimalsController::class]);
 
 Route::get('/student',[StudentController::class,'index']);
 
+Route::post('/student',[StudentController::class,'store']);

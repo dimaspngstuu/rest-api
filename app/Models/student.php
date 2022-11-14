@@ -6,13 +6,9 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
 
-
-class student extends Model
+class Student extends Model
 {
     use HasFactory;
-    static function getAllStudent(){
-        //query select sql
-       $student = DB::select('select * from student');
-       return $student;
-    }
+    protected $fillable = ['nama','nim','email','jurusan'];
+  
 }
