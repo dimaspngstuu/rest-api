@@ -36,6 +36,11 @@ Route::put('/animals/{id}',[AnimalsController::class,'update']);
 Route::delete('/animals',[AnimalsController::class]);
 
 
+
+//route student
+
 Route::get('/student',[StudentController::class,'index']);
 
 Route::post('/student',[StudentController::class,'store']);
+
+

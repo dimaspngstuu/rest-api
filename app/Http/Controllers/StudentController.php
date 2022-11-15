@@ -18,24 +18,26 @@ class StudentController extends Controller
          return response()->json($data,200);
     }
 
+
     public function store(Request $request){
-
         $input = [
-            "nama" => $request->nama,
-            "nim" => $request->nim,
-            "email" => $request->email,
-            "jurusan" => $request->jurusan
+            'nama' => $request->nama,
+            'nim' => $request->nim,
+            'email' => $request->email,
+            'jurusan' => $request->jurusan
         ];
-
+          
         $student = Student::create($input);
 
+
         $data = [
-            'Message' => 'ini adalah data student',
-            'data' => $student
+            "messange" => "data is created",
+            "data" => $student
         ];
 
         return response()->json($data,201);
 
-        
+
+
     }
-}
+};
