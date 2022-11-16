@@ -2,9 +2,11 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+
 use App\Http\Controllers\AnimalsController;
 use App\Http\Controllers\MahaSiswaController;
 use App\Http\Controllers\StudentController;
+use App\Http\Controllers\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -48,5 +50,13 @@ Route::get('student/{id}',[StudentController::class,'show']);
 Route::put('/student/{id}',[StudentController::class,'update']);
 
 Route::delete('/student/{id}',[StudentController::class,'destroy']);
+
+
+
+//Register and Login
+Route::post('/register',[AuthController::class,'register']);
+Route::post('/login',[AuthController::class,'login']);
+
+
 
 
